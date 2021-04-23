@@ -2,14 +2,14 @@
 apiVersion: io.orquestra.workflow/1.0.0
 
 # Prefix for workflow ID
-name: ml-1-workflow
+name: ml-3-workflow
 
 # List components needed by workflow.
 imports:
 - name: sklearn-component
   type: git
   parameters:
-    repository: "git@github.com:masakiikeda-Zapata/training-02.git"
+    repository: "git@github.com:<github_account>/training-02.git"
     branch: "master"
 
 steps:
@@ -21,7 +21,7 @@ steps:
       language: python3
       imports: [sklearn-component]
       parameters:
-        file: sklearn-component/steps/ml_tutorial_1_step.py
+        file: sklearn-component/steps/ml_tutorial_step.py
         function: generate_train_step
   inputs:
     - dataset_name: "simple_dataset"
