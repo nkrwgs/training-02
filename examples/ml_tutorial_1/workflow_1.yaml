@@ -9,7 +9,7 @@ imports:
 - name: sklearn-component
   type: git
   parameters:
-    repository: "git@github.com:<github_account>/training-02.git"
+    repository: "git@github.com:nkrwgs/training-02.git"
     branch: "master"
 
 steps:
